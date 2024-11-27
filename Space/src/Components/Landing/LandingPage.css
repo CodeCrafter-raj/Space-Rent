@@ -1,0 +1,85 @@
+:root {
+  --primary-color: #1e1e1e;
+  --highlight-color: #0056b3;
+  --bone-white: #EBEBEB;
+  --light-gray: #d3d3d3;
+  --secondary-color: #2a2a2a;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bone-white);
+  color: var(--primary-color);
+  padding-top: 60px; /* Adjust based on the navbar's height */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 460px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 1.5s ease-in-out;
+}
+
+.hero-heading h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.dynamic-word {
+  color: var(--highlight-color);
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.other-components {
+  padding: 20px;
+  background-color: var(--light-gray);
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.other-components h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.other-components p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .other-components h2 {
+    font-size: 1.5rem;
+  }
+
+  .other-components p {
+    font-size: 1rem;
+  }
+}

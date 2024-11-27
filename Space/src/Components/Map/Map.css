@@ -1,0 +1,43 @@
+.map-container {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .map-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .map-container p {
+    font-size: 1rem;
+    color: var(--light-gray);
+    margin-bottom: 20px;
+  }
+  
+  .map-container iframe {
+    border-radius: 8px;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .map-pin {
+    animation: pulse 1.5s infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

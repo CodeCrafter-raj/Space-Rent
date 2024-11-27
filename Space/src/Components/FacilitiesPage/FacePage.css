@@ -1,0 +1,91 @@
+:root {
+    --primary-color: #1e1e1e; /* Dark gray */
+    --secondary-color: #2a2a2a; /* Black */
+    --highlight-color: #0056b3; /* Blue */
+    --light-gray: #d3d3d3; /* Light gray */
+    --text-color: #ffffff; /* White */
+    --text-color2: #000000;
+    --bone-white:#EBEBEB;
+    --orngd-color:#ff5722;
+  
+  }
+
+  /* top margin is 25px
+right margin is 50px
+bottom margin is 75px
+left margin is 100px */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four items per row for desktop */
+  gap: 20px; /* Space between grid items */
+  padding: 10px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column; /* Stack image and content vertically */
+  border: 1px solid black;
+  width: 100%; /* Full width of the grid cell */
+  height: 350px; /* Increased height for a taller layout */
+}
+
+.grid-item-image {
+  width: 100%; /* Full width of the container */
+  height: 70%; /* Image occupies 80% of the height */
+  object-fit: cover; /* Ensures the image covers its area proportionally */
+}
+
+.grid-item-content {
+  height: 20%; /* Remaining 20% for heading and paragraph */
+  padding: 5px; /* Add spacing inside the content */
+  text-align: center; /* Center align heading and paragraph */
+}
+
+.grid-item-content h2 {
+  margin: 5px 0; /* Add small spacing between heading and paragraph */
+  font-size: 16px; /* Adjust font size */
+}
+
+.grid-item-content p {
+  margin: 0;
+  font-size: 14px; /* Adjust font size */
+}
+
+/* Tablet View (Max width: 768px) */
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+  }
+
+  .grid-item {
+    height: 300px; /* Same height for tablet */
+  }
+
+  .grid-item-content h2 {
+    font-size: 14px; /* Slightly smaller font size */
+  }
+
+  .grid-item-content p {
+    font-size: 12px; /* Adjust paragraph size */
+  }
+}
+
+/* Mobile View (Max width: 480px) */
+@media screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* One item per row */
+  }
+
+  .grid-item {
+    height: 250px; /* Slightly smaller height for mobile */
+  }
+
+  .grid-item-content h2 {
+    font-size: 14px; /* Maintain readability */
+  }
+
+  .grid-item-content p {
+    font-size: 12px; /* Maintain readability */
+  }
+}

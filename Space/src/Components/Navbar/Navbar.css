@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #1e1e1e;
+    --highlight-color: #0056b3;
+    --bone-white: #EBEBEB;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--bone-white);
+    color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-right: 50px;
+  }
+  
+  .navbar ul li {
+    font-size: 1rem;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  .navbar a:hover {
+    color: var(--highlight-color);
+  }
+  
+  .hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .active-link {
+    color: var(--highlight-color);
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar ul {
+      display: none;
+    }
+  
+    .hamburger-menu {
+      display: block;
+    }
+  }
+  

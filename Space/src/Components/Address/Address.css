@@ -1,0 +1,134 @@
+:root {
+    --primary-color: #1e1e1e; /* Dark gray */
+    --secondary-color: #2a2a2a; /* Black */
+    --highlight-color: #0056b3; /* Blue */
+    --light-gray: #d3d3d3; /* Light gray */
+    --text-color: #ffffff; /* White */
+    --text-color2: #000000;
+    --orngd-color:#ff5722;
+    --bone-white:#EBEBEB;
+
+  }
+
+/* Address Section Container */
+.address-container {
+    padding: 40px 20px;
+    text-align: center;
+    background-color:var(--light-gray);
+  }
+  
+  /* Heading and Subheading */
+  .address-container h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  
+  .address-container p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+  }
+  
+  /* Card Base Style */
+  .card {
+    background: var(--highlight-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Business Hours Card */
+  .business-hours {
+    margin-bottom: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+    color:var(--primary-color);
+
+  }
+  
+  .business-hours h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  .hours-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    font-size: 1rem;
+    color:var(--primary-color);
+  }
+  
+  .hours-info .icon {
+    margin-right: 10px;
+    color: var(--orngd-color);
+  }
+  
+  /* Contact Cards Layout */
+.contact-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  /* Contact Card Styling */
+  .contact-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--highlight-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Icon Styling */
+  .contact-card .icon {
+    font-size: 2.5rem;
+    color: var(--orngd-color);
+    margin-bottom: 15px;
+  }
+  
+  /* Text Styling */
+  .contact-card p {
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Ensure Equal Spacing Between Cards */
+  .contact-cards > .contact-card:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .contact-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .contact-card {
+      max-width: 90%;
+    }
+  }
+  

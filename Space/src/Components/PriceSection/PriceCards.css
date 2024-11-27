@@ -1,0 +1,52 @@
+.cards-container {
+  display: flex;
+  justify-content: space-between; /* Adds spacing between cards */
+  align-items: flex-start; /* Aligns cards to the top */
+  gap: 20px; /* Adds gap between the cards */
+  padding: 20px;
+}
+
+.card {
+  flex: 1 1 20%; /* Ensure all cards scale properly */
+  max-width: 22%; /* Set a limit for card width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card img {
+  width: 100%; /* Make the image take full width of the container */
+  height: 150px; /* Set a fixed height for the image */
+  object-fit: cover; /* Ensures the image fits within the container without overflowing */
+  border-radius: 8px; /* Match the border radius of the card */
+}
+
+.card h3,
+.card p {
+  margin: 10px 0;
+  color: black;
+}
+
+.card-category {
+  font-weight: bold;
+  color: #007bff; /* Highlighted color for category */
+  margin-bottom: 10px;
+}
+
+.card button {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
