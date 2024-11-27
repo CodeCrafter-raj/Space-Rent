@@ -23,7 +23,7 @@ function App() {
       <ContactUs />
       <AddressSection />
       <FAQ/>
-      <MapSection/> 
+      <MapSection/>
       <Type/>
       <FacePage/>
     </>

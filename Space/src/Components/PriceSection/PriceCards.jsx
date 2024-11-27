@@ -4,7 +4,12 @@ import image3 from "../../assets/image3.jpg";
 import seminar1 from "../../assets/seminar1.jpg";
 import seminar2 from "../../assets/seminar2.jpg";
 import cafeteria from "../../assets/Cafeteria.jpg";
+import Auditorium  from "../../assets/Auditorium Hall.jpg"
+import Cafes from "../../assets/Cafes.jpg"
+import Workspace from "../../assets/Workspace.jpg"
+import Libraries from "../../assets/Libraries.jpg"
 import './PriceCards.css'
+
 const PropertyCards = () => {
   const properties = [
     {
@@ -34,7 +39,39 @@ const PropertyCards = () => {
     {
       id: 4,
       category: "Conference Hall",
-      image:seminar2 ,
+      image: seminar2,
+      area: "7000 Square cm",
+      price: "70,000 / Month",
+      location: "98 Grand Boulevard, Uptown",
+    },
+    {
+      id: 5,
+      category: "Auditorium Hall",
+      image: Auditorium,
+      area: "5000 Square cm",
+      price: "70,000 / Month",
+      location: "98 Grand Boulevard, Uptown",
+    },
+    {
+      id: 6,
+      category: "Cafes",
+      image: Cafes,
+      area: "2000 Square cm",
+      price: "70,000 / Month",
+      location: "98 Grand Boulevard, Uptown",
+    },
+    {
+      id: 7,
+      category: "Workspaces",
+      image: Workspace,
+      area: "7000 Square cm",
+      price: "70,000 / Month",
+      location: "98 Grand Boulevard, Uptown",
+    },
+    {
+      id: 8,
+      category: "Libraries",
+      image: Libraries,
       area: "7000 Square cm",
       price: "70,000 / Month",
       location: "98 Grand Boulevard, Uptown",
