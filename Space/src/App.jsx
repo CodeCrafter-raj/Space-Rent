@@ -1,33 +1,25 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import './App.css'
-// import Navbar from './Components/Navbar/Navbar'
-import LandingPage from './Components/Landing/LandingPage'
-import Facilities from './Components/Facilities/Facilities';
-import ContactUs from './Components/ContactUS/ContactUS';
-import AddressSection from './Components/Address/AddressSection';
-import MapSection from './Components/Map/MapSection';
-import Navbar from './Components/Navbar/Navbar';
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes and Route from react-router-dom
+
+import Home from "../src/Pages/Home/Home"
 import FAQ from './Components/FAQ/FAQ';
-import PropertyCards from './Components/PriceSection/PriceCards';
-import FacePage from './Components/FacilitiesPage/FacePage';
-import Type from "./Components/TypeEffect/Type";
+import Facilities from './Components/Facilities/Facilities';
+
 
 function App() {
-
   return (
-    <>
-       <Navbar />
-      <LandingPage />
-      <Facilities />
-      <PropertyCards/>
-      <ContactUs />
-      <AddressSection />
-      <FAQ/>
-      <MapSection/>
-      <Type/>
-      <FacePage/>
-    </>
-  )
+    <Router> {/* Wrap your app in the Router */}
+    <div>
+            <Routes>
+        <Route path="/" element={<Home />} /> {/* Home page */}
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/facilities" element={<Facilities />} />
+
+      </Routes>
+    </div>
+  </Router>
+  );
 }
 
-export default App
+export default App;

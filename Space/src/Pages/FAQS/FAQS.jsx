@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./FAQ.css"; // Custom styles for the FAQ component
+import Navbar from "../../Components/Navbar/Navbar";
 
 const FAQ = () => {
   // Array of FAQs
@@ -46,6 +47,7 @@ const FAQ = () => {
   };
 
   return (
+  
     <div className="faq-container">
       <h1 className="faq-heading">Frequently Asked Questions</h1>
       {faqData.map((faq, index) => (
