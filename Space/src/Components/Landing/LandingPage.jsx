@@ -37,8 +37,7 @@ const LandingPage = () => {
       <div
         className="hero-section"
         style={{
-          backgroundImage: `url(${words[currentWordIndex].image})`,
-        }}
+          backgroundImage: `url(${words[currentWordIndex].image})`,}}
       >
         <div className={`hero-heading ${headingDone ? "heading-done" : ""}`}>
           <h1>
