@@ -1,0 +1,60 @@
+.PopUpOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it is on top */
+  }
+  
+  .PopUpCard {
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .SuccessCard {
+    background-color: white; /* Light green */
+    color: #155724; /* Dark green text */
+  }
+  
+  .FailureCard {
+    background-color: white; /* Light red */
+    color: #721c24; /* Dark red text */
+  }
+  
+  .IconContainer {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .PopUpHeading {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .PopUpMessage {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .CloseButton {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .CloseButton:hover {
+    background-color: #004085;
+  }
+  

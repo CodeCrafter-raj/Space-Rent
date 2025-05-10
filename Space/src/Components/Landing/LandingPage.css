@@ -4,56 +4,72 @@
   --bone-white: #EBEBEB;
   --light-gray: #d3d3d3;
   --secondary-color: #2a2a2a;
-  --color1:#008170;
-  --color2:#e2dcc8;
-  --color3:#fffce1;
-  --color4:#b7d7c0;
-  --color5:#0e100f;
+  --color1: #008170;
+  --color2: #e2dcc8;
+  --color3: #fffce1;
+  --color4: #b7d7c0;
+  --color5: #0e100f;
+}
+
+.container{
+  width: 100%;
+}
+
+/* Reset and global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: var(--color5);
+  background-color: var(--bone-white);
   color: var(--primary-color);
-  padding-top: 30px; /* Adjust based on the navbar's height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  
-}
-
+/* Hero Section */
 .hero-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 460px;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-image 1.5s ease-in-out;
+  width: 100%; /* Prevent horizontal overflow */
+  min-height: calc(100vh - 30px); /* Adjust to match the remaining viewport height after the navbar */
+  margin: 0;
+  padding: 0;
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center; /* Centers the background image */
+  background-attachment: fixed; /* Optional: adds a parallax effect */
+  transition: background-image 1.5s ease-in-out; /* Smooth image transitions */
+}
+
+.hero-heading {
+  position: relative;
+  z-index: 2;
+  padding: 20px 30px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  border-radius: 10px; /* Rounded corners for a modern look */
 }
 
 .hero-heading h1 {
   font-size: 3rem;
-  color: var(--primary-color);
+  color: var(--bone-white);
   letter-spacing: 0.05rem;
   line-height: 4rem;
   margin-bottom: 4rem;
-  /* border: 2px solid red; */
-  
 }
 
 .dynamic-word {
   color: var(--color1);
   font-weight: bold;
-  animation: fadeIn 1.5s ease-in-out;
+  animation: fadeIn 1.5s ease-in-out, slideUp 1.5s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -65,28 +81,65 @@ body {
   }
 }
 
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* .cta-button {
+  margin-top: 20px;
+} */
+
+/* .cta-button button {
+  background-color: var(--highlight-color);
+  color: var(--bone-white);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button button:hover {
+  background-color: var(--color1);
+} */
+
+/* Other Components Section */
 .other-components {
   padding: 20px;
-  background-color: var(--primary-color);
-  color: var(--color3);
+  background-color: var(--light-gray);
+  color: var(--color5);
   text-align: center;
+  max-width: 100%; /* Ensure no overflow */
 }
 
 .other-components h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
   letter-spacing: 0.05rem;
-  line-height: 1rem;
 }
 
 .other-components p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   letter-spacing: 0.05rem;
+  font-weight: bold;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .hero-heading h1 {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 2.5vw, 2rem); /* Scales dynamically */
+    line-height: 2.5rem;
+    padding: 0 10px; /* Adds breathing room */
+  }
+
+  .other-components {
+    padding: 10px;
   }
 
   .other-components h2 {
@@ -95,5 +148,9 @@ body {
 
   .other-components p {
     font-size: 1rem;
+  }
+
+  .hero-section {
+    min-height: calc(100vh - 50px); /* Adjust for smaller navbar height on mobile */
   }
 }

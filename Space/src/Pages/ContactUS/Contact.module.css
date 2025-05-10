@@ -1,0 +1,109 @@
+:root {
+  --primary-color: #1e1e1e; /* Dark gray */
+  --highlight-color: #0056b3; /* Blue */
+  --light-gray: #d3d3d3; /* Light gray */
+  --text-color: #ffffff; /* White */
+  --orngd-color: #ff5722; /* Orange */
+  --bone-white: #EBEBEB; /* Background color */
+  --color5: #0e100f; /* Text color */
+}
+
+/* Center the Contact Us section */
+.ContactUsContainer {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the container takes full height */
+  background-color:white; /* Page background */
+  padding: 10px; /* Reduced padding */
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+/* Form Container */
+.ContactFormContainer {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px; /* Reduced padding for smaller screens */
+  background-color: var(--bone-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box; /* Prevents overflow */
+}
+
+
+/* Contact Form Styles */
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input and Textarea Styles */
+.ContactForm input,
+.ContactForm textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  resize: none; /* Prevent resizing for textareas */
+}
+
+/* Submit Button */
+.FormSubmit {
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: var(--orngd-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.FormSubmit:hover {
+  background-color: burlywood;
+}
+
+/* Error Messages */
+.Error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+}
+
+/* Responsive Adjustments for Tablet View */
+@media (max-width: 1024px) {
+  .ContactUsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; /* Ensure the container takes full height */
+    background-color:white; /* Page background */
+    padding: 5px; /* Reduced padding */
+    box-sizing: border-box; /* Include padding in height calculation */
+  }
+}
+
+/*Responsive Adjustments */
+@media (max-width: 768px) {
+  .ContactUsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Ensure the container takes full height */
+    background-color:white; /* Page background */
+    padding: 10px; /* Reduced padding */
+    box-sizing: border-box; /* Include padding in height calculation */
+  }
+
+  .ContactFormContainer {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+
+
+

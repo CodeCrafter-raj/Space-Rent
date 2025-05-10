@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "./FAQ.css"; // Custom styles for the FAQ component
-import Navbar from "../../Components/Navbar/Navbar";
+import Footer from "../../Components/Footer/Footer";
 
 const FAQ = () => {
   // Array of FAQs
   const faqData = [
     {
-      question: "Can I bring a guest to the co-working space?",
-      answer: "Yes, you can bring a guest to the co-working space. However, they need to be registered at the reception before entry.",
+      question: "Can I bring a guest to the MyaFuture space?",
+      answer: "Yes, you can bring a guest to the MyaFuture space. However, they need to be registered at the reception before entry.",
     },
     {
-      question: "What is the validity of a co-working contract?",
+      question: "What is the validity of a MyaFuture contract?",
       answer: "The validity depends on the type of plan you choose. Monthly and yearly options are available.",
     },
     {
@@ -18,8 +18,8 @@ const FAQ = () => {
       answer: "The minimum booking time for a conference room is one hour.",
     },
     {
-      question: "Where is the exact location of Co Orbit?",
-      answer: "Co Orbit is located at [Insert Address Here].",
+      question: "Where is the exact location of MyaFuture?",
+      answer: "MyaFuture is located at [Insert Address Here].",
     },
     {
       question: "Will I have access to the workspace on public holidays?",
@@ -47,8 +47,8 @@ const FAQ = () => {
   };
 
   return (
-  
-    <div className="faq-container">
+      <>
+       <div className="faq-container">
       <h1 className="faq-heading">Frequently Asked Questions</h1>
       {faqData.map((faq, index) => (
         <div key={index} className="faq-item">
@@ -67,6 +67,8 @@ const FAQ = () => {
         </div>
       ))}
     </div>
+    <Footer/>
+  </>
   );
 };
 

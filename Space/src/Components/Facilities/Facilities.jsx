@@ -4,8 +4,8 @@ import './Facilities.css';
 const Facilities = () => {
   const facilities = [
     { icon: "fa-building", label: "Offices" },
-    { icon: "fa-handshake", label: "Conference" },
-    { icon: "fa-handshake", label: "Meeting" },
+    { icon: "fa-handshake", label: "Conference Room" },
+    { icon: "fa-handshake", label: "Meeting Room" },
     { icon: "fa-lightbulb", label: "Workspaces" },
     { icon: "fa-university", label: "Auditorium" },
     { icon: "fa-coffee", label: "Cafes" },

@@ -1,0 +1,18 @@
+.dashboardContainer {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .formsContainer {
+    display: flex;
+    justify-content: space-between; /* Distribute forms with space between */
+    gap: 20px; /* Add space between forms */
+    flex-wrap: wrap; /* Ensure forms wrap on smaller screens */
+  }
+  
+  .formsContainer > div {
+    flex: 1; /* Make both forms take equal width */
+    min-width: 300px; /* Ensure forms have a minimum width */
+    max-width: 400px; /* Set a maximum width */
+  }
+  

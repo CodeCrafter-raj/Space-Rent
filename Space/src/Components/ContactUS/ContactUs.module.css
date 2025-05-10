@@ -1,0 +1,200 @@
+:root {
+  --primary-color: #1e1e1e; /* Dark gray */
+  --secondary-color: #2a2a2a; /* Black */
+  --highlight-color: #0056b3; /* Blue */
+  --light-gray: #d3d3d3; /* Light gray */
+  --text-color: #ffffff; /* White */
+  --text-color2: #000000;
+  --orngd-color: #ff5722;
+  --bone-white: #EBEBEB;
+  --color1: #008170;
+  --color2: #e2dcc8;
+  --color3: #fffce1;
+  --color4: #b7d7c0;
+  --color5: #0e100f;
+}
+
+/* Container for the whole Contact Us section */
+.ContactUsContainer {
+  display: flex;
+  flex-direction: column; /* Stack heading and sections */
+  align-items: center;
+  padding: 40px 20px;
+  background-color:var(--text-color);
+  gap: 30px;
+}
+
+/* Center the heading */
+.Heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color5);
+}
+
+/* Left Side: Contact Form Container */
+.ContactFormContainer {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px; /* Adjust width */
+  background-color: var(--bone-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Row Styles */
+.FormRow {
+  display: flex;
+  justify-content: space-between; /* Align Name and Email side by side */
+  gap: 15px;
+}
+
+/* Input Fields */
+.FormInputHalf {
+  flex: 1;
+}
+
+.FormInputFull {
+  flex: 0.5; /* Center Phone Number */
+  margin: 0 auto;
+}
+
+.FormTextArea {
+  width: 100%;
+  resize: none;
+  height: 100px;
+}
+
+/* Submit Button */
+.FormSubmit {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 0 auto; /* Center Submit Button */
+  background-color: var(--orngd-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.FormSubmit:hover {
+  background-color: #0056b3;
+}
+
+/* Business Hours Container */
+.BusinessHours{
+  margin-top: 2rem;
+}
+
+/* Center Heading */
+.BusinessHours h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: var(--highlight-color);
+  text-align: center; /* Center align the heading */
+}
+
+/* Hours Info - Row Style */
+.HoursInfo {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  justify-content: space-between; /* Add spacing between elements */
+  gap: 10rem; /* Adjust spacing between rows */
+}
+
+/* Individual Day Section */
+.DaySection {
+  display: flex;
+  flex-direction: column; /* Stack heading and time */
+  align-items: center; /* Center align day and time */
+}
+
+/* Day Heading Style */
+.DayHeading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--highlight-color);
+  margin-bottom: 3px; /* Reduced spacing below heading */
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between text and icon */
+}
+
+/* Time Style */
+.TimeInfo {
+  font-size: 1rem;
+  color: var(--highlight-color);
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between text and icon */
+}
+
+
+/* Pop-Up Container */
+.PopUpContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: var(--bone-white);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 80%;
+  font-size: 1rem;
+  color: var(--color5);
+  animation: fade-in 0.3s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Pop-Up Success and Error Colors */
+.PopUpSuccess {
+  border: 2px solid green;
+}
+
+.PopUpError {
+  border: 2px solid red;
+}
+
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .ContactUsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ContactFormContainer,
+  .BusinessHoursContainer {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .FormRow {
+    flex-direction: column; /* Stack form fields on smaller screens */
+  }
+
+  .FormInputHalf {
+    width: 100%; /* Full width on mobile */
+  }
+}

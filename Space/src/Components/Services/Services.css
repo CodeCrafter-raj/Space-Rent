@@ -1,0 +1,175 @@
+:root {
+  --primary-color: #1e1e1e;
+  --highlight-color: #0056b3;
+  --bone-white: #EBEBEB;
+  --light-gray: #d3d3d3;
+  --secondary-color: #2a2a2a;
+  --color1:#008170;
+  --color2:#e2dcc8;
+  --color3:#fffce1;
+  --color4:#b7d7c0;
+  --color5:#0e100f;
+  --seashell:#FFF5EE;
+  --peach:#FFE5B4;
+  --parche:#FCF5E5;
+  --cornsilk:#FFF8DC;
+}
+
+
+.servicecards-container {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap; /* Wrap cards to the next row if needed */
+  justify-content: space-between; /* Ensures even spacing */
+  gap: 8px; /* Space between cards */
+  padding: 10px; /* Small padding around container */
+  width: 100%; /* Full width for the container */
+  box-sizing: border-box; /* Ensure padding doesn’t affect width */
+  background-color: white;
+  overflow-x: hidden; /* Prevent horizontal overflow issues */
+}
+
+.servicecard {
+  margin-top: 2rem;
+  flex: 1 1 calc(23% - 10px); /* Slightly reduce card width to fit four in a row */
+  max-width: calc(23% - 10px); /* Ensure consistency in width */
+  min-width: 140px; /* Maintain a reasonable minimum width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 350px;
+  margin-bottom: 20px; /* Space between rows */
+  padding: 5px; /* Less padding inside cards */
+  border: 1px solid var(--bone-white);
+  border-radius: 8px;
+  background-color: var(--bone-white);
+  box-sizing: border-box; /* Padding and border won't affect the card width */
+}
+
+.servicecard img {
+  width: 100%; /* Full width of card */
+  height: 120px; /* Reduced height */
+  object-fit: cover; /* Ensure images maintain aspect ratio */
+  border-radius: 8px;
+  margin: 0 auto 5px; /* Center the image and add space below */
+}
+
+.servicecard h3,
+.servicecard p {
+  margin: 15px 0 0 5px; /* Reduced margin */
+  color: var(--color5);
+  font-size: 14px; /* Reduced font size */
+}
+
+.servicecard-category {
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 8px; /* Reduced spacing */
+}
+
+.servicecard button {
+  margin-top: auto;
+  padding: 8px; /* Smaller button size */
+  background-color: white;
+  color: var(--color5);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 70%; /* Adjusted width for smaller buttons */
+  transition: background-color 0.3s ease;
+  font-size: 12px; /* Smaller font for buttons */
+}
+
+.servicecard button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    opacity: 0.5; /* Slightly faded */
+  }
+}
+
+.blinking-button {
+  animation: blink 1.5s infinite; /* Adjust the duration (1.5s) for speed */
+}
+
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1200px) {
+  .servicecard {
+    flex: 1 1 calc(31% - 10px); /* Three cards per row */
+  }
+
+  .servicecard img {
+    height: 100px; /* Adjusted for smaller screens */
+  }
+
+  .servicecard h3,
+  .servicecard p {
+    font-size: 13px; /* Smaller text */
+  }
+
+  .servicecard button {
+    font-size: 11px; /* Smaller button text */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .servicecard {
+    flex: 1 1 48%; /* Simplified to 48% for two cards per row */
+    max-width: 48%; /* Optional: Enforce maximum width */
+  }
+
+  .servicecard img {
+    height: 100px; /* Further reduction for smaller screens */
+  }
+
+  .servicecard h3,
+  .servicecard p {
+    font-size: 12px; /* Even smaller text */
+  }
+
+  .servicecard button {
+    font-size: 10px; /* Smaller button size */
+    padding: 6px; /* Reduced padding */
+  }
+
+  .servicecards-container {
+    gap: 5px; /* Reduce gap for tablet screens */
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .servicecard {
+    flex: 1 1 100%; /* One card per row */
+    max-width: 100%; /* Ensure full width */
+  }
+
+  .servicecard img {
+    height: 100px; /* Smallest image size for mobile */
+  }
+
+  .servicecard h3,
+  .servicecard p {
+    font-size: 11px; /* Compact text for mobile */
+  }
+
+  .servicecard button {
+    font-size: 10px; /* Smallest button size */
+    padding: 5px;
+    width: 80%; /* Adjusted width */
+  }
+  .servicecards-container {
+    gap: 5px; /* Further reduce gap for mobile screens */
+    margin-right: 15px;
+  }
+}
+
+  

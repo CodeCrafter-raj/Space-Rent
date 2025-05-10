@@ -1,0 +1,136 @@
+/* Main Container */
+.main-container {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: flex-start;
+  gap: 25px; /* Space between carousel and info container */
+  padding: 20px;
+  margin-top: 80px; /* Add margin from the top for navbar spacing */
+}
+
+/* Carousel Container */
+.carousel-container {
+  width: 50%; /* Decrease the width */
+  max-width: 600px; /* Set a max-width for smaller devices */
+  overflow: hidden;
+  height: 400px; /* Decrease the height */
+  position: relative; /* For positioning elements inside */
+}
+
+/* Info Container */
+.info-container {
+  margin-top: 3rem;
+  width: 40%; /* Adjust width for balance */
+  /* height: 400px;  */
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.info-container p {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  transform: translateX(calc(-100% * var(--current-index, 0)));
+  height: 100%; /* Match reduced container height */
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+  display: none; /* Hide non-active slides */
+  height: 100%; /* Ensure image fills reduced height */
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%; /* Full width of container */
+  height: 100%; /* Full height of container */
+  object-fit: cover; /* Ensures the image fills the div */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Information Div */
+.carousel-info {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjust position to the center */
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  max-height: 90%; /* Prevent overflow from large content */
+  overflow-y: auto; /* Add scroll for overflow */
+  width: 90%; /* Adjust width relative to the image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Buttons */
+.carousel-nav {
+  position: absolute;
+  bottom: 10px; /* Place buttons at the bottom of the container */
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  padding: 8px 15px; /* Reduced button size */
+  cursor: pointer;
+  font-size: 1rem; /* Reduced font size */
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.carousel-nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-nav.prev {
+  left: 45%; /* Center button horizontally */
+}
+
+.carousel-nav.next {
+  left: 55%; /* Center button horizontally */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100%; /* Expand to full width on smaller screens */
+    max-width: 100%;
+    height: 380px; /* Reduce height further */
+  }
+
+  .info-container {
+    width: 100%; /* Stack info below carousel */
+    margin-top: 20px;
+  }
+
+  .carousel-info {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .carousel-nav {
+    font-size: 0.8rem;
+    padding: 6px 10px; /* Further reduce button size for smaller screens */
+  }
+}

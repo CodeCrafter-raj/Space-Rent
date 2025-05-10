@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import image8 from "../../assets/seminar2.jpg";
-import image7 from "../../assets/image7.jpg";
+import image7 from "../../assets/priv1.jpg";
 import image3 from "../../assets/image3.jpg";
-import image5 from "../../assets/image5.jpg";
-import cafeteria from "../../assets/Cafeteria.jpg";
+import confe from "../../image3/confe.jpg"
+import desk from  "../../image3/dedicated.webp" ;
 
 import "./LandingPage.css"; // Keep landing page-specific styles here.
 
 const words = [
   { text: "Office Space", image: image3 },
-  { text: "Cafeteria", image: cafeteria },
+  { text: "Dedicated Desk", image: desk },
   { text: "Seminar Hall", image: image8 },
-  { text: "Conference Room", image: image5 },
+  { text: "Conference Room", image: confe },
   { text: "Private Office Space", image: image7 },
 ];
 
@@ -33,7 +33,8 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="container">
+    <>
+    <div>
       <div
         className="hero-section"
         style={{
@@ -53,6 +54,8 @@ const LandingPage = () => {
         <p>Explore a range of facilities to suit your needs.</p>
       </div>
     </div>
+    </>
+    
   );
 };
 
